@@ -16,7 +16,7 @@ public final class JavaClass {
     @NotNull
     private final String language;
     @NotNull
-    private String name;
+    private String verb;
 
     @NotNull
     public final JavaClass.GDGPitesti getGdg() {
@@ -38,9 +38,9 @@ public final class JavaClass {
         return this.language;
     }
 
-    public final void initializeName(@NotNull String name) {
-        Intrinsics.checkParameterIsNotNull(name, "name");
-        this.gdg = new JavaClass.GDGPitesti(name);
+    public final void initializeName(@NotNull String verb) {
+        Intrinsics.checkParameterIsNotNull(verb, "verb");
+        this.gdg = new JavaClass.GDGPitesti(verb);
     }
 
     @NotNull
@@ -51,23 +51,23 @@ public final class JavaClass {
             Intrinsics.throwUninitializedPropertyAccessException("gdg");
         }
 
-        return var10000.append(var10001.getText()).append(' ').append(this.name).append(' ').append(this.language).toString();
+        return var10000.append(var10001.getText()).append(' ').append(this.verb).append(' ').append(this.language).toString();
     }
 
     @NotNull
     public final String getName() {
-        return this.name;
+        return this.verb;
     }
 
     public final void setName(@NotNull String var1) {
         Intrinsics.checkParameterIsNotNull(var1, "<set-?>");
-        this.name = var1;
+        this.verb = var1;
     }
 
-    public JavaClass(@NotNull String name) {
+    public JavaClass(@NotNull String verb) {
         super();
-        Intrinsics.checkParameterIsNotNull(name, "name");
-        this.name = name;
+        Intrinsics.checkParameterIsNotNull(verb, "verb");
+        this.verb = verb;
         this.language = "Kotlin";
     }
 
