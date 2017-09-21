@@ -5,7 +5,7 @@ package magdamiu.com.kotlinintro
  */
 
 
-class KotlinClass(var name: String) {
+class KotlinClass(var verb: String) {
     lateinit var gdg: GDGPitesti
     val language: String
 
@@ -19,7 +19,7 @@ class KotlinClass(var name: String) {
 
     inner class GDGPitesti(val text: String)
 
-    fun sayItFromGDG(): String = "${gdg.text} $name $language"
+    fun sayItFromGDG(): String = "${gdg.text} $verb $language"
 }
 
 fun main(args: Array<String>) {
